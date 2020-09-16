@@ -1,0 +1,11 @@
+<h1> Smoothie </h1>
+<h3> <%= @smoothie.name %> </h3>
+
+<h3><%= @smoothie.select do |s| %></h3>
+   <%# <%=s.name%> 
+   <% Ingredient.all.select do |i| %>
+        <% if i.smoothie_id == s.id %>
+          <%= i.name %>
+            <% end %>
+            <% end %>
+        
